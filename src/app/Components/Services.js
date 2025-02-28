@@ -1,16 +1,29 @@
 "use client";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 import ServicesBox from "./ServicesBox";
 import serviceImg from "../images/ServicesOffered.webp";
-import services from "../images/RepairIcon.webp";
-import motorRepair from "../images/motorRepair.webp";
-import wiring from "../images/Wiring.webp";
-import Expertice from "../images/Trusted expertice.webp"
+import services from "../images/Services-Img/RepairIcon.webp";
+import motorRepair from "../images/Services-Img/motorRepair.webp";
+import wiring from "../images/Services-Img/Wiring.webp";
+import Expertice from "../images/Services-Img/Trusted expertice.webp";
+
 function Services() {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const [isInView, setIsInView] = useState(false);
+
+  // Ensure animation runs only on the client
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const observer = new IntersectionObserver(
+        ([entry]) => setIsInView(entry.isIntersecting),
+        { rootMargin: "-100px" }
+      );
+      if (sectionRef.current) observer.observe(sectionRef.current);
+      return () => observer.disconnect();
+    }
+  }, []);
 
   return (
     <motion.div 
@@ -20,7 +33,7 @@ function Services() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="service mt-2 border-t border-b border-solid border-indigo-600"
     >
-      <div className="serviceSection">
+      <div className="Section">
         {/* Section Image */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
@@ -33,6 +46,7 @@ function Services() {
             width={2000}
             height={2000}
             alt="service image"
+            priority
           />
         </motion.div>
 
@@ -50,7 +64,7 @@ function Services() {
         <div className="cards">
           <div className="container">
             <div className="grid grid-cols-3 gap-4">
-              {[ 
+              {[
                 { img: services, alt: "repair", name: "Mechanical Repairing" },
                 { img: motorRepair, alt: "motor repair", name: "Motor Repair" },
                 { img: wiring, alt: "Wiring", name: "Electrical Services" },

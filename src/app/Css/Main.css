@@ -2,8 +2,8 @@
     font-size: 2vw;
     position: absolute;
     top: 20px;
-    
 }
+
 .peragraph{
     position: absolute;
     display: flex;
@@ -68,7 +68,7 @@
     width: 100vw;
 }
 /* *****************************************services section ************************************ */
-.serviceSection{
+.Section{
     position: relative;
     display: flex;
     justify-content: center;
