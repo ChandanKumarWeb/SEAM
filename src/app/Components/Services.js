@@ -64,7 +64,7 @@ function Services() {
         {/* Service Cards */}
         <div className="cards">
           <div className="container">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {[
                 { img: services, alt: "repair", name: "Mechanical Repairing" },
                 { img: motorRepair, alt: "motor repair", name: "Motor Repair" },

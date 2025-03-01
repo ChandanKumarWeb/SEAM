@@ -11,10 +11,11 @@
     align-items: center;
     justify-content: center;
     width: 70vw;
-    height: 60vh;
+    height: fit-content;
     text-align: center;
     background-color: #000;
     margin: 10px;
+    padding: 20px;
     opacity: 0.6;
     font-size: 1.5vw;
     border-radius: 25px;
@@ -105,11 +106,43 @@
     height: 30vh;
 }
 
+@media screen and (max-width: 770px) {
+    .card {
+        height: 25vh;
+        width: 28vh;
+       }
+    .serIcon {
+     width: 42vw;
+     height: 20vh;
+    }
+}
+
 
 @media screen and (max-width: 500px) {
-
+    .mainImg{
+        height: 50vh;
+    }
+    .aboutImg{
+        height: 50vh;
+    }
     .intro{
         font-size: 2.2vw;
     }
-    
+    .heading{
+        font-size: 4vw;
+    }
+    .peragraph{
+        font-size: 2vw;
+    }
+    .card {
+        height: 26vh;
+        width: 24vh;
+    }
+    .serIcon {
+        width: 40vw;
+        height: 18vh;
+    }
+    .serPera {
+        font-size: 14px;
+    }
 }
