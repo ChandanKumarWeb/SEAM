@@ -53,12 +53,13 @@ function Testimonial() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     arrows: false,
   };
 
   return (
-    <motion.div
+    <section id="why-us">
+      <motion.div
       ref={sectionRef}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -95,22 +96,30 @@ function Testimonial() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
-              className="flex flex-col items-center text-center bg-white bg-opacity-20 p-6 rounded-lg shadow-lg"
+              className="flex flex-col items-center text-center bg-white bg-opacity-20 p-6 rounded-2xl shadow-lg"
             >
-              <Image
-                src={img}
-                alt={name}
-                width={80}
-                height={80}
-                className="rounded-full mb-4"
-              />
-              <p className="text-lg italic">"{review}"</p>
+              <motion.div
+                initial={{ scale: 0.8 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="w-20 h-20 flex items-center justify-center mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg"
+              >
+                <Image
+                  src={img}
+                  alt={name}
+                  width={80}
+                  height={80}
+                  className="rounded-full object-cover"
+                />
+              </motion.div>
+              <p className="text-lg italic mt-4">&ldquo;{review}&rdquo;</p>
               <h2 className="mt-4 font-semibold text-xl">{name}</h2>
             </motion.div>
           ))}
         </Slider>
       </div>
-    </motion.div>
+      </motion.div>
+    </section>
   );
 }
 

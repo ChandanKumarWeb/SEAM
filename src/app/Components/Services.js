@@ -26,7 +26,8 @@ function Services() {
   }, []);
 
   return (
-    <motion.div 
+    <section id="services">
+      <motion.div 
       ref={sectionRef}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -89,7 +90,8 @@ function Services() {
           </div>
         </div>
       </div>
-    </motion.div>
+      </motion.div>
+    </section>
   );
 }
 

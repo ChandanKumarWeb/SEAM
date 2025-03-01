@@ -29,7 +29,7 @@ function About() {
   const isInView = useInView(aboutRef, { once: true, margin: "-100px" });
 
   return (
-    <>
+    <section id="about">
       {/* Scroll Indicator */}
       <motion.div
         id="scroll-indicator"
@@ -92,7 +92,7 @@ function About() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }
 
