@@ -7,8 +7,9 @@ import serviceImg from "../images/ServicesOffered.webp";
 import services from "../images/Services-Img/RepairIcon.webp";
 import motorRepair from "../images/Services-Img/motorRepair.webp";
 import wiring from "../images/Services-Img/Wiring.webp";
-import Expertice from "../images/Services-Img/Trusted expertice.webp";
-
+import Expertice from "../images/Services-Img/Trusted expertice.png";
+import Spareparts from "../images/Services-Img/SpareParts.png";
+import Battery from "../images/Services-Img/Battery.png";
 function Services() {
   const sectionRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
@@ -70,8 +71,8 @@ function Services() {
                 { img: motorRepair, alt: "motor repair", name: "Motor Repair" },
                 { img: wiring, alt: "Wiring", name: "Electrical Services" },
                 { img: Expertice, alt: "repair", name: "Trusted Expertise" },
-                { img: motorRepair, alt: "motor repair", name: "Motor Repair" },
-                { img: wiring, alt: "Wiring", name: "Electrical Services" },
+                { img: Spareparts, alt: "motor repair", name: "Spare Parts" },
+                { img: Battery, alt: "Battery", name: "Battery Checking" },
               ].map((service, index) => (
                 <motion.div
                   key={index}
