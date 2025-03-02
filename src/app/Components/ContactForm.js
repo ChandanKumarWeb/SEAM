@@ -53,7 +53,7 @@ function ContactForm() {
   return (
     <section 
       ref={sectionRef}
-      className="bg-black text-white py-12 px-6 sm:px-12 md:px-20 lg:px-32 min-h-screen flex flex-col items-center justify-center"
+      className="bg-black text-white py-12 px-6 sm:px-12 md:px-20 lg:px-32 min-h-screen flex flex-col items-center justify-center mt-2 border-t border-b border-solid border-indigo-600"
     >
       <motion.h1 
         initial={{ opacity: 0, y: -20 }} 

@@ -10,7 +10,7 @@ function Footer() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="bg-black text-white py-10 mt-10 border-t border-indigo-600"
+      className="bg-black text-white py-10 mt-2 border-t border-indigo-600"
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-20 flex flex-wrap justify-between">
         {/* Logo and Description */}
